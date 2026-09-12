@@ -40,8 +40,9 @@ After downloading it is necessary to extract the files. You can extract wherever
       <td>BEVFusion-LiDAR</td>
       <td><a href="https://download.openmmlab.com/mmdetection3d/v1.1.0_models/bevfusion/bevfusion_lidar_voxel0075_second_secfpn_8xb4-cyclic-20e_nus-3d-2628f933.pth">Download</a></td>
       <td>
+        <pre><code>
         wget https://download.openmmlab.com/mmdetection3d/v1.1.0_models/bevfusion/bevfusion_lidar_voxel0075_second_secfpn_8xb4-cyclic-20e_nus-3d-2628f933.pth -O bevfusion_lidar.pth
-      </td>
+        </pre></code>
     </tr>
     <tr>
       <td>CenterPoint</td>
