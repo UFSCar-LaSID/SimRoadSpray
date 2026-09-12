@@ -32,7 +32,6 @@ After downloading it is necessary to extract the files. You can extract wherever
     <tr>
       <th>Model name</th>
       <th>Model weights</th>
-      <th>Download command</th>
     </tr>
   </thead>
   <tbody>
@@ -43,9 +42,6 @@ After downloading it is necessary to extract the files. You can extract wherever
           Download
         </a>
       </td>
-      <td>
-        <pre><code>wget https://download.openmmlab.com/mmdetection3d/v1.1.0_models/bevfusion/bevfusion_lidar_voxel0075_second_secfpn_8xb4-cyclic-20e_nus-3d-2628f933.pth -O bevfusion_lidar.pth</code></pre>
-      </td>
     </tr>
     <tr>
       <td>CenterPoint</td>
@@ -53,9 +49,6 @@ After downloading it is necessary to extract the files. You can extract wherever
         <a href="https://download.openmmlab.com/mmdetection3d/v1.0.0_models/centerpoint/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth">
           Download
         </a>
-      </td>
-      <td>
-        <pre><code>wget https://download.openmmlab.com/mmdetection3d/v1.0.0_models/centerpoint/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth -O centerpoint.pth</code></pre>
       </td>
     </tr>
     <tr>
@@ -65,9 +58,6 @@ After downloading it is necessary to extract the files. You can extract wherever
           Download
         </a>
       </td>
-      <td>
-        <pre><code>wget https://download.openmmlab.com/mmdetection3d/v1.0.0_models/ssn/hv_ssn_regnet-400mf_secfpn_sbn-all_2x16_2x_nus-3d/hv_ssn_regnet-400mf_secfpn_sbn-all_2x16_2x_nus-3d_20210829_210615-361e5e04.pth -O ssn.pth</code></pre>
-      </td>
     </tr>
     <tr>
       <td>PointPillars</td>
@@ -76,12 +66,16 @@ After downloading it is necessary to extract the files. You can extract wherever
           Download
         </a>
       </td>
-      <td>
-        <pre><code>wget https://download.openmmlab.com/mmdetection3d/v1.0.0_models/pointpillars/hv_pointpillars_fpn_sbn-all_4x8_2x_nus-3d/hv_pointpillars_fpn_sbn-all_4x8_2x_nus-3d_20210826_104936-fca299c1.pth -O pointpillars.pth</code></pre>
-      </td>
     </tr>
   </tbody>
 </table>
+
+```
+wget https://download.openmmlab.com/mmdetection3d/v1.1.0_models/bevfusion/bevfusion_lidar_voxel0075_second_secfpn_8xb4-cyclic-20e_nus-3d-2628f933.pth -O bevfusion_lidar.pth
+wget https://download.openmmlab.com/mmdetection3d/v1.0.0_models/centerpoint/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus/centerpoint_01voxel_second_secfpn_circlenms_4x8_cyclic_20e_nus_20220810_030004-9061688e.pth -O centerpoint.pth
+wget https://download.openmmlab.com/mmdetection3d/v1.0.0_models/ssn/hv_ssn_regnet-400mf_secfpn_sbn-all_2x16_2x_nus-3d/hv_ssn_regnet-400mf_secfpn_sbn-all_2x16_2x_nus-3d_20210829_210615-361e5e04.pth -O ssn.pth
+wget https://download.openmmlab.com/mmdetection3d/v1.0.0_models/pointpillars/hv_pointpillars_fpn_sbn-all_4x8_2x_nus-3d/hv_pointpillars_fpn_sbn-all_4x8_2x_nus-3d_20210826_104936-fca299c1.pth -O pointpillars.pth
+```
 
 ### 3. Packages Installation
 
