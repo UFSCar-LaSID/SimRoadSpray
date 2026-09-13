@@ -85,14 +85,95 @@ The models used in this project are trained on the [nuScenes dataset](https://ww
 
 ### 3. Packages Installation
 
+To run the experiments, you must install MMDetection3D along with the required Python dependencies. There are two supported installation methods:
+
+1. Using Docker (recommended)
+2. Installing from source (without Docker)
+
+We strongly recommend using the Docker-based installation, as it provides a consistent environment and makes reproducing the experimental results significantly more reliable.
+
+#### Docker installation (recommended)
+
+Build the Docker image containing all the required dependencies by running:
+
 ```
 docker build -t sim_road_spray .
 ```
 
+Once the image has been built, create a Docker container with the following command:
+
 ```
+docker run --gpus all --shm-size=8g -it -d \ 
+  -v <SimRoadSpray_path>:/mmdetection3d/data/indoor_spray \ 
+  -v ./configs:/mmdetection3d/extra_configs \ 
+  -v ./models:/mmdetection3d/models \
+  -v ./scripts:/mmdetection3d/scripts \ 
+  sim_road_spray
 ```
 
+Replace the placeholder `<nuscenes_path>` with where the SimRoadSpray dataset is (or will be) stored.
+
+After creating the container, list the running containers to obtain its ID:
+
+```
+docker ps
+```
+
+Then attach to the container:
+
+```
+docker attach <container_id>
+```
+
+Once inside the container, you can proceed to the next steps.
+
+#### Installation without docker
+
+Alternatively, you can install MMDetection3D directly on your system. Follow the [official installation guide](https://mmdetection3d.readthedocs.io/en/latest/get_started.html) and install MMDetection3D from source.
+
 ### 4. Run models evaluation
+
+With all installed, you can execute the following commands to generate the models predictions and evaluation.
+
+#### BEVFusion-LiDAR
+
+```
+python /mmdetection3d/scripts/evaluate.py \
+    --config /mmdetection3d/extra_configs/bevfusion_lidar.py \
+    --checkpoint /mmdetection3d/models/bevfusion_lidar.pth \
+    --save_path /mmdetection3d/results/bevfusion_lidar \
+    --clamp_boxes --extra_z_value -0.2 --add_zeros_col
+```
+
+#### CenterPoint
+
+```
+python /mmdetection3d/scripts/evaluate.py \
+    --config /mmdetection3d/extra_configs/centerpoint.py \
+    --checkpoint /mmdetection3d/models/centerpoint.pth \
+    --save_path /mmdetection3d/results/centerpoint \
+    --clamp_boxes --extra_z_value -0.2 --add_zeros_col
+```
+
+#### SSN
+
+```
+python /mmdetection3d/scripts/evaluate.py \
+    --config /mmdetection3d/extra_configs/ssn.py \
+    --checkpoint /mmdetection3d/models/ssn.pth \
+    --save_path /mmdetection3d/results/ssn \
+    --clamp_boxes --extra_z_value -0.2 --add_zeros_col
+```
+
+#### PointPillars
+
+```
+python /mmdetection3d/scripts/evaluate.py \
+    --config /mmdetection3d/extra_configs/pointpillars.py \
+    --checkpoint /mmdetection3d/models/pointpillars.pth \
+    --save_path /mmdetection3d/results/pointpillars \
+    --clamp_boxes --extra_z_value -0.2 --add_zeros_col
+```
 
 ### 5. Generate plots and tables
 
