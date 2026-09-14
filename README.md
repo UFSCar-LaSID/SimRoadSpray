@@ -308,7 +308,7 @@ Once the image has been built, create a Docker container with the following comm
 
 ```
 docker run --gpus all --shm-size=8g -it -d \ 
-  -v <SimRoadSpray_path>:/mmdetection3d/data/indoor_spray \ 
+  -v <SimRoadSpray_path>:/mmdetection3d/data/SimRoadSpray \ 
   -v ./configs:/mmdetection3d/extra_configs \ 
   -v ./models:/mmdetection3d/models \
   -v ./scripts:/mmdetection3d/scripts \ 

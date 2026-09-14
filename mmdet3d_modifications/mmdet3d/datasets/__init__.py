@@ -24,7 +24,7 @@ from .transforms import (AffineResize, BackgroundPointsFilter, GlobalAlignment,
                          RandomShiftScale, Resize3D, VoxelBasedPointSampler)
 from .utils import get_loading_pipeline
 from .waymo_dataset import WaymoDataset
-from .indoor_spray_dataset import IndoorSprayDataset
+from .simroadspray_dataset import SimRoadSprayDataset
 
 __all__ = [
     'KittiDataset', 'CBGSDataset', 'NuScenesDataset', 'LyftDataset',
@@ -39,5 +39,5 @@ __all__ = [
     'VoxelBasedPointSampler', 'get_loading_pipeline', 'RandomDropPointsColor',
     'RandomJitterPoints', 'ObjectNameFilter', 'AffineResize',
     'RandomShiftScale', 'LoadPointsFromDict', 'Resize3D', 'RandomResize3D',
-    'IndoorSprayDataset'
+    'SimRoadSprayDataset'
 ]

@@ -148,7 +148,7 @@ def save_preds_as_json(preds, save_path):
 
 if __name__ == '__main__':
     import argparse
-    from mmdet3d.datasets.indoor_spray_dataset import IndoorSprayDataset
+    from mmdet3d.datasets.simroadspray_dataset import SimRoadSprayDataset
     from mmdet3d.structures.bbox_3d import LiDARInstance3DBoxes
     import os
     from tqdm import tqdm
@@ -236,7 +236,7 @@ if __name__ == '__main__':
         'pts': 'points',
         'pts_semantic_mask': 'full_labels',
     }
-    data_root = '/mmdetection3d/data/indoor_spray/scenes_filtered'
+    data_root = '/mmdetection3d/data/SimRoadSpray/scenes_filtered'
     metainfo = {
         'classes': [
             'background', 'target', 'car', 'spray'
@@ -263,7 +263,7 @@ if __name__ == '__main__':
     os.makedirs(save_path, exist_ok=True)
     
     def generate_preds(scene_idx, scene_name, condition):
-        dataset = IndoorSprayDataset(
+        dataset = SimRoadSprayDataset(
             data_root=data_root,
             data_prefix=data_prefix,
             metainfo=metainfo,

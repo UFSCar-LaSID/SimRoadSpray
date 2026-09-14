@@ -24,7 +24,7 @@ def get_bboxes(label_path):
     return LiDARInstance3DBoxes(gt_bboxes_3d)
 
 @DATASETS.register_module()
-class IndoorSprayDataset(BaseDataset):
+class SimRoadSprayDataset(BaseDataset):
 
     
     def __init__(self,
