@@ -177,4 +177,8 @@ python /mmdetection3d/scripts/evaluate.py \
 
 ### 5. Generate plots and tables
 
+After completing the evaluation, generate the figures and tables used in the analysis by executing all cells in the [`plots_and_tables.ipynb`](/scripts/plots_and_tables.ipynb) Jupyter notebook.
+
+Ensure that the evaluation has been completed successfully and that the results are available in the expected location before running the notebook. By default, the notebook reads the results from `/mmdetection3d/results`. If the evaluation results are stored in a different directory, update the corresponding path in the notebook before execution. The tables and plots will be saved in `/mmdetection3d/plots_and_tables`.
+
 ## Citation
