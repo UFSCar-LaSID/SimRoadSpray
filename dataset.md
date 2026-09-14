@@ -1,11 +1,11 @@
 
 # SimRoadSpray dataset documentation
 
-This page explains how the SimRoadSpray dataset is organized. The dataset is publicly available and can be downloaded in this link. [TODO LINK].
+This page describes the organization, experimental configurations, and data formats of the SimRoadSpray dataset. The dataset is publicly available and can be downloaded from [TODO: Add download link].
 
-## Dataset strucutre
+## Dataset structure
 
-The dataset has the following folder structure:
+The SimRoadSpray dataset is organized into five main directories:
 
 ```
 SimRoadSpray
@@ -16,7 +16,7 @@ SimRoadSpray
 └── scenes_full
 ```
 
-Each one of these folders have subfolders for each scene of the dataset (there are a total of 25 scenes).
+Each directory contains one subdirectory for each scene. The dataset comprises a total of 25 scenes, corresponding to different experimental configurations, target distances, and environmental conditions.
 
 ## Scenes configurations
 
@@ -56,7 +56,7 @@ Scenarios A and B were evaluated at target distances of 10, 20, and 30m, while S
 
 ## Dataset folders
 
-The following subsections explain each dataset folder in more details.
+This section describes the contents and organization of each dataset directory.
 
 ### `calib` folder
 
@@ -65,7 +65,7 @@ The following subsections explain each dataset folder in more details.
 └── calib.json
 ```
 
-For each scene a `calib.json` is given. This is necessary to project informations (such as 3D detections) into the camera images. Each JSON contain two matrices: `T_cam_lidar` to project points from LiDAR to camera, and `P` to project camera points into the image.
+For each scene, a `calib.json` is given. This is necessary to project information (such as 3D detections) into the camera images. Each JSON contains two matrices: `T_cam_lidar` to project points from LiDAR to camera, and `P` to project camera points into the image.
 
 ### `cam_images` folder
 
@@ -77,7 +77,7 @@ For each scene a `calib.json` is given. This is necessary to project information
 └── <image_10>.png
 ```
 
-For each scene 10 images were sampled. The filenames represent the data collection timestamp of the image.
+For each scene, 10 images were sampled. The filenames represent the data collection timestamp of the image.
 
 ### `labels` folder
 
@@ -89,9 +89,9 @@ For each scene 10 images were sampled. The filenames represent the data collecti
 └── <image_10>.png
 ```
 
-For each scene and each frame a `.txt` file in the 3D KITTI detection label is given. Each file is named with the timestamp of the collected LiDAR data. The filename matches the point cloud filenames from the next section.
+For each scene and each frame, a `.txt` file in the 3D KITTI detection label is given. Each file is named with the timestamp of the collected LiDAR data. The filename matches the point cloud filenames from the next section.
 
-The label file contain 15 columns, described below:
+The label file contains 15 columns, described below:
 
 | Values | Name | Description |
 |---:|---|---|
@@ -107,7 +107,9 @@ The label file contain 15 columns, described below:
 
 ### `scenes_filtered` and `scenes_full` folders
 
-This repository contains the binary labeled point clouds collected from the indoor spray experiments. The dataset is organized in the structure bellow:
+The `scenes_filtered` and `scenes_full` folders contain the point clouds with their labels for each point. The `scenes_full` folder contains the raw point clouds, with all points collected from the LiDAR sweep. The `scenes_filtered` folder contains a subset of the full point cloud, only with the points in the area of ​​interest (the area with the car, target, or spray points, with most of the background points removed).
+
+Each one of them contains the binary-labeled point clouds. They are organized in the structure below:
 
 ```
 <scene_folder>
@@ -129,19 +131,19 @@ Where each `scene_folder` contains the labeled point clouds of a specific scene.
 
 Each `scene_folder` contain **3** subfolders. These folders contain the binary files, each one being named with the timestamp of the data collection. Next, the **3** folders are explained in details:
 
-1. The `points` folder: contains the original point clouds in the binary (`.bin`) format. These point clouds have the xyz coordinates and the intesity of each point in the point cloud (totalizing 4 columns). It is possible to read this file using `numpy`, as shown in the code snipet:
+1. The `points` folder: contains the original point clouds in the binary (`.bin`) format. These point clouds have the xyz coordinates and the intensity of each point in the point cloud (totaling 4 columns). It is possible to read this file using `numpy`, as shown in the code snippet:
 
     ```
     np.fromfile(file_path, dtype=np.float32).reshape(-1, 4)
     ```
 
-2. The `full_labels` folder: contains the original labels in the binary (`.bin`) format. It is one array containing the labeled point cloud using the original classes (background, target, car and spray). These labels can be used for data analysis. It is possible to read this file using `numpy`, as shown in the code snipet:
+2. The `full_labels` folder contains the original labels in the binary (`.bin`) format. It is one array containing the labeled point cloud using the original classes (background, target, car, and spray). These labels can be used for data analysis. It is possible to read this file using `numpy`, as shown in the code snippet:
 
     ```
     np.fromfile(file_path, dtype=np.uint8)
     ```
 
-3. The `spray_filter_labels` folder: contains the spray filter labels in the binary (`.bin`) format. It is one array containing the labeled point cloud using the not spray class (1 - car, target, background) and spray (0 - spray). This can be used to train models to learn how to filter out the water spray. It is possible to read this file using `numpy`, as shown in the code snipet:
+3. The `spray_filter_labels` folder contains the spray filter labels in the binary (`.bin`) format. It is one array containing the labeled point cloud using the non-spray class (1 - car, target, background) and spray (0 - spray). This can be used to train models to learn how to filter out the water spray. It is possible to read this file using `numpy`, as shown in the code snippet:
 
     ```
     np.fromfile(file_path, dtype=np.uint8)
