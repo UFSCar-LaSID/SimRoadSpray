@@ -8,6 +8,184 @@ Road spray is an underexplored adverse weather phenomenon that significantly deg
 
 ## Results
 
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Scenario</th>
+      <th colspan="3">BEVFusion LiDAR</th>
+      <th colspan="3">CenterPoint</th>
+      <th colspan="3">PointPillars</th>
+      <th colspan="3">SSN</th>
+    </tr>
+    <tr>
+      <th>AP Dry</th>
+      <th>AP Spr</th>
+      <th>AP Loss (%)</th>
+      <th>AP Dry</th>
+      <th>AP Spr</th>
+      <th>AP Loss (%)</th>
+      <th>AP Dry</th>
+      <th>AP Spr</th>
+      <th>AP Loss (%)</th>
+      <th>AP Dry</th>
+      <th>AP Spr</th>
+      <th>AP Loss (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A 10m</td>
+      <td>0.97</td>
+      <td>0.164</td>
+      <td>83.08</td>
+      <td>0.92</td>
+      <td>0.124</td>
+      <td>86.55</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>N/A</td>
+      <td>0.16</td>
+      <td>0.001</td>
+      <td>99.42</td>
+    </tr>
+    <tr>
+      <td>A 20m</td>
+      <td>1.0</td>
+      <td>0.609</td>
+      <td>39.11</td>
+      <td>0.946</td>
+      <td>0.543</td>
+      <td>42.64</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>N/A</td>
+      <td>0.2</td>
+      <td>0.082</td>
+      <td>58.81</td>
+    </tr>
+    <tr>
+      <td>A 30m</td>
+      <td>0.995</td>
+      <td>0.812</td>
+      <td>18.4</td>
+      <td>1.0</td>
+      <td>0.681</td>
+      <td>31.9</td>
+      <td>0.01</td>
+      <td>0.028</td>
+      <td>-176.68</td>
+      <td>0.034</td>
+      <td>0.002</td>
+      <td>92.73</td>
+    </tr>
+    <tr>
+      <td>B 10m</td>
+      <td>0.955</td>
+      <td>0.932</td>
+      <td>2.46</td>
+      <td>1.0</td>
+      <td>0.65</td>
+      <td>35.01</td>
+      <td>0.995</td>
+      <td>0.932</td>
+      <td>6.31</td>
+      <td>0.382</td>
+      <td>0.268</td>
+      <td>29.72</td>
+    </tr>
+    <tr>
+      <td>B 20m</td>
+      <td>0.975</td>
+      <td>0.836</td>
+      <td>14.27</td>
+      <td>0.995</td>
+      <td>0.761</td>
+      <td>23.6</td>
+      <td>0.284</td>
+      <td>0.164</td>
+      <td>42.52</td>
+      <td>0.088</td>
+      <td>0.078</td>
+      <td>11.11</td>
+    </tr>
+    <tr>
+      <td>B 30m</td>
+      <td>0.999</td>
+      <td>0.847</td>
+      <td>15.29</td>
+      <td>1.0</td>
+      <td>0.365</td>
+      <td>63.48</td>
+      <td>0.047</td>
+      <td>0.001</td>
+      <td>98.81</td>
+      <td>0.087</td>
+      <td>0.008</td>
+      <td>91.23</td>
+    </tr>
+    <tr>
+      <td>C 5m</td>
+      <td>0.989</td>
+      <td>0.931</td>
+      <td>5.82</td>
+      <td>1.0</td>
+      <td>0.993</td>
+      <td>0.68</td>
+      <td>0.69</td>
+      <td>0.785</td>
+      <td>-13.76</td>
+      <td>1.0</td>
+      <td>0.948</td>
+      <td>5.18</td>
+    </tr>
+    <tr>
+      <td>C 10m</td>
+      <td>0.978</td>
+      <td>0.866</td>
+      <td>11.44</td>
+      <td>1.0</td>
+      <td>0.998</td>
+      <td>0.15</td>
+      <td>0.912</td>
+      <td>0.901</td>
+      <td>1.28</td>
+      <td>1.0</td>
+      <td>0.987</td>
+      <td>1.27</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.983</td>
+      <td>0.75</td>
+      <td>23.72</td>
+      <td>0.983</td>
+      <td>0.639</td>
+      <td>34.94</td>
+      <td>0.367</td>
+      <td>0.351</td>
+      <td>4.4</td>
+      <td>0.369</td>
+      <td>0.297</td>
+      <td>19.51</td>
+    </tr>
+    <tr>
+      <th>median</th>
+      <td>0.983</td>
+      <td>0.841</td>
+      <td>14.44</td>
+      <td>1.0</td>
+      <td>0.665</td>
+      <td>33.44</td>
+      <td>0.166</td>
+      <td>0.096</td>
+      <td>42.28</td>
+      <td>0.18</td>
+      <td>0.08</td>
+      <td>55.44</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Dataset details
 
 ## Reproducing our results
