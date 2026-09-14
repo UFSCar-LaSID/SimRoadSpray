@@ -1,13 +1,19 @@
 
 # SimRoadSpray dataset documentation
 
-
+This page explains how the SimRoadSpray dataset is organized. The dataset is publicly available and can be downloaded in this link. [TODO LINK].
 
 ## Dataset strucutre
 
 The dataset has the following folder structure:
 
 ```
+SimRoadSpray
+├── calib
+├── cam_images
+├── labels
+├── scenes_filtered
+└── scenes_full
 ```
 
 Each one of these folders have subfolders for each scene of the dataset (there are a total of 25 scenes).
@@ -52,16 +58,35 @@ Scenarios A and B were evaluated at target distances of 10, 20, and 30m, while S
 
 ### `calib` folder
 
+```
+<scene_folder>
+└── calib.json
+```
+
+For each scene a `calib.json` is given. This is necessary to project informations (such as 3D detections) into the camera images. Each JSON contain two matrices: `T_cam_lidar` to project points from LiDAR to camera, and `P` to project camera points into the image.
+
 ### `cam_images` folder
 
+```
+<scene_folder>
+├── <image_1>.png
+├── <image_2>.png
+├── ...
+└── <image_10>.png
+```
+
+For each scene 10 images were sampled. The filenames represent the data collection timestamp of the image.
+
 ### `labels` folder
+
+
 
 ### `scenes_filtered` and `scenes_full` folders
 
 This repository contains the binary labeled point clouds collected from the indoor spray experiments. The dataset is organized in the structure bellow:
 
 ```
-<scene_folder>/
+<scene_folder>
 ├── points/
 │   ├── <xyz_intensity_pcd_1>.bin
 │   ├── <xyz_intensity_pcd_2>.bin
