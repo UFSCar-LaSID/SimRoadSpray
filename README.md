@@ -142,7 +142,7 @@ python /mmdetection3d/scripts/evaluate.py \
     --config /mmdetection3d/extra_configs/bevfusion_lidar.py \
     --checkpoint /mmdetection3d/models/bevfusion_lidar.pth \
     --save_path /mmdetection3d/results/bevfusion_lidar \
-    --clamp_boxes --extra_z_value -0.2 --add_zeros_col
+    --clamp_boxes --extra_z_value -0.4 --add_zeros_col --z_min -1.6
 ```
 
 #### CenterPoint
@@ -152,7 +152,7 @@ python /mmdetection3d/scripts/evaluate.py \
     --config /mmdetection3d/extra_configs/centerpoint.py \
     --checkpoint /mmdetection3d/models/centerpoint.pth \
     --save_path /mmdetection3d/results/centerpoint \
-    --clamp_boxes --extra_z_value -0.2 --add_zeros_col
+    --clamp_boxes --extra_z_value -0.4 --add_zeros_col --z_min -1.6
 ```
 
 #### SSN
@@ -162,7 +162,7 @@ python /mmdetection3d/scripts/evaluate.py \
     --config /mmdetection3d/extra_configs/ssn.py \
     --checkpoint /mmdetection3d/models/ssn.pth \
     --save_path /mmdetection3d/results/ssn \
-    --clamp_boxes --extra_z_value -0.2 --add_zeros_col
+    --clamp_boxes --extra_z_value -0.4 --add_zeros_col --z_min -1.6
 ```
 
 #### PointPillars
@@ -172,7 +172,7 @@ python /mmdetection3d/scripts/evaluate.py \
     --config /mmdetection3d/extra_configs/pointpillars.py \
     --checkpoint /mmdetection3d/models/pointpillars.pth \
     --save_path /mmdetection3d/results/pointpillars \
-    --clamp_boxes --extra_z_value -0.2 --add_zeros_col
+    --clamp_boxes --extra_z_value -0.4 --add_zeros_col --z_min -1.6
 ```
 
 ### 5. Generate plots and tables
