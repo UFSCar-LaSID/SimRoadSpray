@@ -204,6 +204,8 @@ Below we present the main results of our study.
 
 ## Dataset details
 
+The dataset is detailed in a [specialized documentation page](dataset.md).
+
 ## Reproducing our results
 
 This section describes the complete pipeline required to reproduce the experiments presented in this work. The process consists of five stages:
