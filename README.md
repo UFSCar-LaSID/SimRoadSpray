@@ -12,6 +12,14 @@ Road spray is an underexplored adverse weather phenomenon that significantly deg
 
 ## Reproducing our results
 
+This section describes the complete pipeline required to reproduce the experiments presented in this work. The process consists of five stages:
+
+1. **Dataset download**: Download the SimRoadSpray dataset.
+2. **Models download**: Download the models weights necessary to evaluate the 3D detections algorithms.
+3. **Package installation**: Set up the required software environment by installing MMDetection3D and all project dependencies, either using Docker (recommended) or a local installation.
+4. **3D detection models evaluation**: Evaluate the models under spray and dry conditions.
+5. **Plots and tables generation**: Generate all figures and tables presented in the paper from the evaluation results using the provided Jupyter notebook.
+
 ### 1. Dataset download
 
 The first step necessary to reproduce our results is to download the dataset, which includes de points clouds that will be analysed and processed by the 3D object detection models. The dataset is publicly available and can be downloaded in this link. [TODO LINK].
