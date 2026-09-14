@@ -1,8 +1,10 @@
 # SimRoadSpray
 
-GitHub repository under construction
+Official repository for "Beyond Rain: Investigating the Impact of Road Spray on LiDAR-Based Perception for ADAS".
 
 ## Abstract
+
+Road spray is an underexplored adverse weather phenomenon that significantly degrades the performance of LiDAR-based perception systems in automated vehicles. Unlike rain or fog, spray is generated dynamically by moving vehicles on wet surfaces, making its systematic evaluation highly challenging due to uncontrollable field conditions and limited data availability. This paper proposes and evaluates a physical road spray testbed that enables reproducible road spray generation for controlled LiDAR sensor evaluation. Using a modular frame with individually configurable water nozzles, we create a semantically annotated point cloud dataset named SimRoadSpray, and benchmark four state-of-the-art LiDAR-based object detectors across three spatial scenarios and multiple distances. Experimental results show that, at the point cloud level, spray reduces the number of valid LiDAR returns by up to 33%, with point loss generally increasing with distance. This reduction in point density is more pronounced than the concurrent decrease in return intensity. Furthermore, spray adversely affects detection accuracy across all architectures, revealing significant architecture-dependent differences in robustness. Voxel-based detectors consistently outperform pillar-based methods, with BEVFusion LiDAR exhibiting the highest detection performance and the lowest median AP degradation (14.4%) under spray conditions.
 
 ## Results
 
@@ -182,3 +184,6 @@ After completing the evaluation, generate the figures and tables used in the ana
 Ensure that the evaluation has been completed successfully and that the results are available in the expected location before running the notebook. By default, the notebook reads the results from `/mmdetection3d/results`. If the evaluation results are stored in a different directory, update the corresponding path in the notebook before execution. The tables and plots will be saved in `/mmdetection3d/plots_and_tables`.
 
 ## Citation
+
+```
+```
