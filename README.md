@@ -200,7 +200,7 @@ Below we present the main results of our study.
   </tbody>
 </table>
 
-*Comparison of Average Precision (AP) at an IoU threshold of 0.5 for multiple 3D object detection algorithms under dry and spray conditions. The columns "AP Dry" and "AP Spr" report the detection performance in the dry (no spray) and spray scenarios, respectively. The column "AP Loss (%)"" indicates the degradation caused by spray, computed as the percentage decrease in AP with respect to the corresponding dry scene.*
+*Comparison of Average Precision (AP) at an IoU threshold of 0.5 for multiple 3D object detection algorithms under dry and spray conditions. The columns "AP Dry" and "AP Spr" report the detection performance in the dry (no spray) and spray scenarios, respectively. The column "AP Loss (%)" indicates the degradation caused by spray, computed as the percentage decrease in AP with respect to the corresponding dry scene.*
 
 ## Dataset details
 
