@@ -8,6 +8,20 @@ Road spray is an underexplored adverse weather phenomenon that significantly deg
 
 ## Results
 
+Below we present the main results of our study.
+
+### Points quantity and intesity loss plots
+
+![Comparison of percentage loss of LiDAR points belonging to the target and vehicle classes under spray conditions](figures/points_loss.png)
+
+*Comparison of percentage loss of LiDAR points belonging to the target and vehicle classes under spray conditions*
+
+![Comparison of percentage loss of LiDAR intensity return for points belonging to the target and vehicle classes under spray conditions.](figures/intensity_loss.png)
+
+*Comparison of percentage loss of LiDAR intensity return for points belonging to the target and vehicle classes under spray conditions.*
+
+### Detection on dry vs. spray
+
 <table>
   <thead>
     <tr>
@@ -185,6 +199,8 @@ Road spray is an underexplored adverse weather phenomenon that significantly deg
     </tr>
   </tbody>
 </table>
+
+*Comparison of Average Precision (AP) at an IoU threshold of 0.5 for multiple 3D object detection algorithms under dry and spray conditions. The columns "AP Dry" and "AP Spr" report the detection performance in the dry (no spray) and spray scenarios, respectively. The column "AP Loss (%)"" indicates the degradation caused by spray, computed as the percentage decrease in AP with respect to the corresponding dry scene.*
 
 ## Dataset details
 
