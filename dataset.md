@@ -56,6 +56,8 @@ Scenarios A and B were evaluated at target distances of 10, 20, and 30m, while S
 
 ## Dataset folders
 
+The following subsections explain each dataset folder in more details.
+
 ### `calib` folder
 
 ```
@@ -79,6 +81,28 @@ For each scene 10 images were sampled. The filenames represent the data collecti
 
 ### `labels` folder
 
+```
+<scene_folder>
+├── <label_file_1>.txt
+├── <label_file_2>.txt
+├── ...
+└── <image_10>.png
+```
+
+For each scene and each frame a `.txt` file in the 3D KITTI detection label is given. Each file is named with the timestamp of the collected LiDAR data. The filename matches the point cloud filenames from the next section.
+
+The label file contain 15 columns, described below:
+
+| Values | Name | Description |
+|---:|---|---|
+| 1 | `type` | Object class (in this dataset is just "car") |
+| 1 | `truncated` | Ignore. Always set to `0` (just to follow the KITTI format) |
+| 1 | `occluded` | Ignore. Always set to `0` (just to follow the KITTI format) |
+| 1 | `alpha` | Ignore. Always set to `-10` (just to follow the KITTI format) |
+| 4 | `bbox` | Ignore. Always set to `0` (just to follow the KITTI format) |
+| 3 | `dimensions` | 3D object dimensions: height, length, width (in meters) |
+| 3 | `location` | 3D object location x, y, z in camera coordinates (in meters) |
+| 1 | `rotation_y` | Rotation `r_y` around Y-axis in camera coordinates `[-pi..pi]` |
 
 
 ### `scenes_filtered` and `scenes_full` folders
