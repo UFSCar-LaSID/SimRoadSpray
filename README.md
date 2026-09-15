@@ -20,6 +20,10 @@ Below we present the main results of our study.
 
 *Comparison of percentage loss of LiDAR intensity return for points belonging to the target and vehicle classes under spray conditions.*
 
+![Comparison of percentage loss of LiDAR intensity return for points belonging to the target and vehicle classes under spray conditions.](figures/intensity_loss_with_lost.png)
+
+*Comparison of percentage loss of LiDAR intensity return for points belonging to the target and vehicle classes under spray conditions, considering that lost points are intensity 0 returns.*
+
 ### Detection on dry vs. spray
 
 <table>
