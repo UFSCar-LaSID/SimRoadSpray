@@ -381,6 +381,10 @@ python /mmdetection3d/scripts/evaluate.py \
     --clamp_boxes --extra_z_value -0.4 --add_zeros_col --z_min -1.6
 ```
 
+#### Parameters selection
+
+The selected `extra_z_value` and `z_min` values were determined using the code provided in the [`scripts/grid_search`](scripts/grid_search) folder. These scripts enable a systematic search over different pre-processing parameters to identify the configuration that maximizes model accuracy. This parameter search is necessary because of differences between the nuScenes dataset, on which the models were trained, and the SimRoadSpray dataset used in the current experiments.
+
 ### 5. Generate plots and tables
 
 After completing the evaluation, generate the figures and tables used in the analysis by executing all cells in the [`plots_and_tables.ipynb`](/scripts/plots_and_tables.ipynb) Jupyter notebook.
