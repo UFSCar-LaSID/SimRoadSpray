@@ -206,6 +206,12 @@ Below we present the main results of our study.
 
 *Comparison of Average Precision (AP) at an IoU threshold of 0.5 for multiple 3D object detection algorithms under dry and spray conditions. The columns "AP Dry" and "AP Spr" report the detection performance in the dry (no spray) and spray scenarios, respectively. The column "AP Loss (%)" indicates the degradation caused by spray, computed as the percentage decrease in AP with respect to the corresponding dry scene.*
 
+### BEVFusion-LiDAR AP vs. IoU threhold
+
+![](figures/AP_vs_th.png)
+
+*As the distance increases, the AP degradation due to IoU threhold decreases. This indicates that displacement error is less pronounced as distance increases.*
+
 ## Dataset details
 
 The dataset is detailed in a [specialized documentation page](dataset.md).
