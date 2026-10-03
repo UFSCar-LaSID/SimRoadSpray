@@ -228,7 +228,7 @@ This section describes the complete pipeline required to reproduce the experimen
 
 ### 1. Dataset download
 
-The first step necessary to reproduce our results is to download the dataset, which includes de points clouds that will be analysed and processed by the 3D object detection models. The dataset is publicly available and can be downloaded in this link. [TODO LINK].
+The first step necessary to reproduce our results is to download the dataset, which includes de points clouds that will be analysed and processed by the 3D object detection models. The dataset is publicly available and can be downloaded in this [link](https://zenodo.org/records/23111754).
 
 After downloading it is necessary to extract the files. You can extract wherever you want, but you need to remember the path to the dataset for the next steps. After extracting the files, it is expected to have the following folder structure:
 
