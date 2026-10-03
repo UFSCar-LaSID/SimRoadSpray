@@ -1,7 +1,7 @@
 
 # SimRoadSpray dataset documentation
 
-This page describes the organization, experimental configurations, and data formats of the SimRoadSpray dataset. The dataset is publicly available and can be downloaded from [TODO: Add download link].
+This page describes the organization, experimental configurations, and data formats of the SimRoadSpray dataset. The dataset is publicly available and can be downloaded from [Zenodo](https://zenodo.org/records/23111754).
 
 ## Dataset structure
 
