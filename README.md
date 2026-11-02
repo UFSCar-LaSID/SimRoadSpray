@@ -1,6 +1,6 @@
 # SimRoadSpray
 
-Official repository for "Beyond Rain: Investigating the Impact of Road Spray on LiDAR-Based Perception for ADAS".
+Official repository for "Beyond Rain: Investigating the Impact of Road Spray on LiDAR-Based Perception for ADS".
 
 ## Abstract
 
