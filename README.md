@@ -212,9 +212,9 @@ Below we present the main results of our study.
 
 *As the distance increases, the AP degradation due to IoU threhold decreases. This indicates that displacement error is less pronounced as distance increases.*
 
-## Dataset details
+## Dataset and testbed details
 
-The dataset is detailed in a [specialized documentation page](dataset.md).
+The dataset is detailed in a [specialized documentation page](dataset.md). The testbed configuration is also explained in more details in a [specialized documentation page](testbed.md).
 
 ## Reproducing our results
 
